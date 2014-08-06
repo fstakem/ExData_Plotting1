@@ -21,7 +21,7 @@ test_import_data_range <- function()
     imported_data <- import_data_range(raw_data_path, start_date, end_date)
     
     checkEquals(nrow(imported_data), 2880)
-    checkEquals(ncol(imported_data), 9)
+    checkEquals(ncol(imported_data), 10)
     
     actual_start_date <- imported_data$Date[1]
     actual_end_date <- imported_data$Date[length(imported_data$Date)]
