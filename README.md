@@ -1,3 +1,6 @@
+## Homework submission
+- Code for the project is located in the src directory
+
 ## Introduction
 
 This assignment uses data from
