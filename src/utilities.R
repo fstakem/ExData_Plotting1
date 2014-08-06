@@ -10,7 +10,21 @@
 # -----------------------------------------------------------------------------------------------
 
 
-import_data_range <- function(path, start, end)
+# Import data from range
+import_data_range <- function(path, start_date, end_date)
 {
+    raw_data <- read.delim(path, sep=';', na.strings='?', colClasses=c('character', 'character', rep('numeric', 7)))
+    raw_data$Date <- as.Date(raw_data$Date, format = "%d/%m/%Y")
     
+    if(end_date > start_date)
+    {
+        subset_data <- subset(raw_data, start_date <= raw_data$Date)
+        subset_data <- subset(subset_data, subset_data$Date <= end_date)
+        
+        return(subset_data)
+    }
+    else
+    {
+        stop('Start date is greater than end date')
+    }  
 }
