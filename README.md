@@ -1,5 +1,8 @@
 ## Homework submission
-- Code for the project is located in the src directory
+- Source code for the project is located in the directory: /src
+- Test code for the project is located in the dirctory: /test
+- The code is written with the assumption the data is stored in the directory: /raw_data
+- The raw data was not added to the github repo because it was too large to upload as an individual file
 
 ## Introduction
 
